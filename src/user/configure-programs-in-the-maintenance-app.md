@@ -3,7 +3,7 @@
 ## About programs { #about_program_maintenance_app } 
 
 Traditionally, public health information systems have been reporting
-aggregated data of service provision across their health programs. This
+aggregated data of service provision across its health programs. This
 does not allow you to trace the people provided with these services. In
 DHIS2, you can define your own programs with stages. These programs are
 an essential part of the "tracker" functionality which lets you track
@@ -35,9 +35,9 @@ Table: Program metadata objects in the Maintenance app
 | Program rule | Allows you to create and control dynamic behaviour of the user interface in the **Tracker Capture** and **Event Capture** apps. | Create, edit, clone, delete, show details and translate |
 | Program rule variable | Variables you use to create program rule expressions. | Create, edit, clone, delete, show details and translate |
 | Relationship type | Defines the relationship between tracked entity A and tracked entity B, for example mother and child. | Create, edit, clone, share, delete, show details and translate |
-| Tracked entity type | Types of entities which can be tracked through the system. Can be anything from persons to commodities, for example a medicine or a person.<br> <br>A program must have one tracked entity. To enrol a tracked entity instance into a program, the tracked entity of an entity and tracked entity of a program must be the same.<br>      <br>    **Note**<br>     <br>    A program must be specified with only one tracked entity. Only tracked entity as same as the tracked entity of program can enroll into that program. | Create, edit, clone, share, delete, show details and translate |
+| Tracked entity type | Types of entities which can be tracked through the system. Can be anything from persons to commodities, for example a medicine or a person.<br> <br>A program must have one tracked entity. To enrol a tracked entity instance into a program, the tracked entity of an entity and tracked entity of a program must be the same.<br>      <br>    **Note**<br>     <br>    A program must be specified with only one tracked entity. Only tracked entities that are the same as the program’s tracked entity can enroll in that program. | Create, edit, clone, share, delete, show details and translate |
 | Tracked entity attribute | Used to register extra information for a tracked entity.<br> <br>Can be shared between programs. | Create, edit, clone, share, delete, show details and translate |
-| Program | A program consist of program stages. | Create, edit, share, delete, assign to organisation units, show details and translate |
+| Program | A program consists of program stages. | Create, edit, share, delete, assign to organisation units, show details and translate |
 | Program stage | A program stage defines which actions should be taken at each stage. | Create, edit, share, change sort order, delete, show details and translate |
 | Program indicator group | A group of program indicators | Create, edit, clone, share, delete, show details and translate |
 | Validation rule | A validation rule is based on an expression which defines a relationship between data element values. | Create, edit, clone, share, delete, show details and translate |
@@ -67,7 +67,7 @@ Table: Types of data entry forms for event programs
 >   - Custom forms take precedence over section forms if both are
 >     present.
 >
->   - If no custom or section form is defined, the basic form will be
+>   - If no custom or section form are defined, the basic form will be
 >     used.
 >
 >   - The Android apps only support section forms.
@@ -115,14 +115,14 @@ attributes and program parameters.
     | **Version** | The version of the program. This is used for example when people collect data offline in an Android implementation. When they go online and synchronize their metadata, they should get the latest version of the program. |
     | **Category combination** | The category combination you want to use. The default setting is **None**. |
     | **Open days after category option end date** | If you selected a category combination other than None, you may enter zero or a positive number. This lets you enter data for this program for a category option up to the specified number of days after that category option's end date.    |
-    | **Completed events expiry date** | Defines the number of days for which you can edit a completed event. This means that when an event is completed and the specified number of expiry days has passed, the event is locked.<br>     <br>If you set "Completed events expiry days" to 10", an event is locked ten days after the completion date. After this date you can no longer edit the event. |
+    | **Data approval workflow** | The data approval workflow you want to use. The default setting is **No value**. |
+    | **Completed events expiry date** | Defines the number of days for which you can edit a completed event. This means that when an event is completed and the specified number of expiry days has passed, the event is locked.<br>     <br>If you set "Completed events expiry days" to 10, an event is locked ten days after the completion date. After this date you can no longer edit the event. |
     | **Expiry period type**<br>     <br>**Expiry days** | The expiry days defines for how many days after the end of the previous period, an event can be edited. The period type is defined by the expiry period type. This means that when the specified number of expiry days has passed since the end date of the previous period, the events from that period are locked.<br>     <br>If you set the expiry type to "Monthly" and the expiry days to "10" and the month is October, then you can't add or edit an event to October after the 10th of November. |
-     | **User assignment of events** |  Select check box to enable user assignment of the event  <br>  <br>  This means that in the form there will be a list of  users to which the event can be assigned.  |
     | **Block entry form after completed** | Select checkbox to block the entry form after completion of the event of this program.<br>     <br>This means that the data in the entry form can't be changed until you reset the status to incomplete. |
     | **Feature type** | Sets whether the program is going to capture a geographical feature type or not. <br>- **None**   Nothing is captured. <br>- **Polygon**   An area is captured. For single event programs the area will be the area representing the event being captured. For tracker programs, the area will represent the area of the enrollment. <br>- **Point**   A point/coordinate is captured. For single event programs the point will be representing the event being captured. For tracker programs, the point will represent the enrollment.      |
     | **Validation strategy** | Sets the server and client side validation requirement. <br><br>Data type validation is always performed regardless of the validation strategy. An integer field is never stored containing text, for example. <br>- **On complete**  This option will enforce required field and error messages to be fixed when completing the event, but the event can be saved to the server without passing these validation requirements. For legacy reasons, this is always the validation strategy for tracker programs, where each data value in the event is stored to the server while entering data. <br>- **On update and insert**   This option will enforce required field validation when saving the event to the server regardless of the completion status. When using this option no events can be stored without passing validations. |
     | **Pre-generate event UID** | Select checkbox to pre-generate unique event id numbers. |
-    | **Custom label for report date** | Type a description of the report date.<br>     <br>This description is displayed in the case entry form. |
+    | **Description of report date** | Type a description of the report date.<br>     <br>This description is displayed in the case entry form. |
 
 1.  Click next.
 
@@ -169,7 +169,7 @@ the user in the **Event Capture** app.
     3.  Add data elements by clicking the plus sign next to the data
         elements' names.
 
-    4.  Repeat the above steps until you have all the sections you need.
+    4.  Repeat above steps until you've all the sections you need.
 
     5.  Change the section order: click the options menu, then drag the
         section to the place you want.
@@ -192,7 +192,7 @@ available in the **Access** tab.
 Assign organization units:
 
 1.  In the organisation tree, double-click the organisation units you
-    want to add to the program.
+    want to add to the program to.
 
     You can locate an organisation unit in the tree by expanding the
     branches (click on the arrow symbol), or by searching for it by
@@ -273,9 +273,7 @@ Change roles and access:
         | Organisation unit contact | Receives program notifications via e-mail or text message.<br>         <br>To receive a program notification, the receiving organisation unit must have a registered contact person with e-mail address and phone number. |
         | Users at organisation unit | All users registered to the selected organisation unit receive program notifications via the internal DHIS2 messaging system. |
         | User group | All members of the selected user group receive the program notifications via the internal DHIS2 messaging system |
-        | Program attribute | Receives program notifications via e-mail or text message.<br>         <br>To receive a program notification, the recipient must have an e-mail address or a phone number attribute. |
-        | Data element | Receives program notifications via e-mail or text message.<br>         <br>To receive a program notification, the recipient must have an e-mail address or a phone number data element. |
-        | Web hook | TBA |
+        | Program | TBA |
 
     3.  Click **Save**.
 
@@ -364,7 +362,7 @@ program. A program needs several types of metadata that you create in the **Main
 | **Completed events expiry days** |  Defines the number of days for which you can edit a completed event. This means that when an event is completed and the specified number of expiry days has passed, the event is locked. <br> <br> If you set "Completed events expiry days" to 10", an event is locked ten days after the completion date. After this date you can no longer edit the event.  |
 | **Expiry period type**<br> <br>**Expiry days** |  The expiry days defines for how many days after the end of the previous period, an event can be edited. The period type is defined by the expiry period type. This means that when the specified number of expiry days has passed since the end date of the previous period, the events from that period are locked. <br> <br> If you set the expiry type to "Monthly" and the expiry days to "10" and the month is October, then you can't add or edit an event to October after the 10th of November.  |
 | **Minimum number of attributes required to search** |  Specify the number of tracked entity attributes that needs to be filled in to search for Tracked Entities in the Program.  |
-| **Maximum number of tracked entities to return in search** |  Specify the maximum number of tracked entities that is allowed to match a search outside capture scope. This setting can be used to force the user to search in a more targeted manner and narrow down the search results, rather than allowing a user to search and see a large number of results outside their capture scope. Enter 0 for no limit. More info [here](../developer/web-api/tracker.md#tracked-entities-collection-limits).|
+| **Maximum number of tracked entity instances to return in search** |  Specify the maximum number of tracked entity instances that should be returned in a search. Enter 0 for no limit.  |
 
 #### Enter enrollment details { #enter_enrollment_details } 
 
@@ -373,10 +371,9 @@ program. A program needs several types of metadata that you create in the **Main
 | **Allow future enrollment dates** |Select checkbox if you want to allow tracked entity instances to be enrolled in the program on a future date.|
 | **Allow future incident dates** |Select checkbox if you want to allow the incident date in the program to be on a future date.|
 | **Only enroll once (per tracked entity instance lifetime)** |Select checkbox if you want a tracked entity to be able to enroll only once in a program. This setting is useful for example in child vaccination or post-mortem examination programs where it wouldn’t make sense to enroll a tracked entity more than once.|
-| **Show incident date** |This setting allows you to show or hide the incident date field when a tracked entity enroll in the program.|
-| **Custom label for incident date** | Defines the meaning of the incident date in this program.<br> <br>For example:<br> <br>In an immunization program for child under 1 year old, the incident date is the child's birthday. <br> <br>In a maternal program, the incident date is the date of last menstrual period.  |
-| **Custom label for enrollment date** |Defines the meaning of the enrollment date in this program, typically representing the date when the tracked entity is enrolled into the program.|
-| **Custom label for:**<br> - **enrollment(s)** <br> - **event(s)** <br> - **program stage(s)** <br> - **follow-up** <br> - **registering unit** <br> - **relationship** <br> - **note** <br> - **tracked entity attribute** | Renames standard DHIS2 terms for this program. These labels only affect how the terms are displayed in the user interface and do not change their meaning. Note: Only Enrollment, Event, and Program Stage support plural forms; all other labels do not. Currently, these custom labels are used only by the DHIS2 Android app.
+| **Show incident date** |This setting allows you to show or hide the incident date field when a tracked entity enrolls in the program.|
+| **Description of incident date** | Type a description of the incident date<br> <br>For example:<br> <br>In an immunization program for child under 1 year old, the incident date is the child's birthday. <br> <br>In a maternal program, the incident date is the date of last menstrual period.  |
+| **Type a description of the enrollment date** |The date when the tracked entity is enrolled into the program|
 | **Ignore overdue events** |When a tracked entity enrolls into the program, the events corresponding to the program stages are created. If you select this checkbox, the system will not generate overdue events.|
 | **Feature type** |Sets whether the program is going to capture a geographical feature type or not. <br> * **None:** Nothing is captured.<br> * **Polygon:** An area is captured. For single event programs the area will be the area representing the event being captured. For tracker programs, the area will represent the area of the enrollment. <br> * **Point:** A point/coordinate is captured. For single event programs the point will be representing the event being captured. For tracker programs, the point will represent the enrollment. |
 | **Related program** |Choose a Tracker program which is related to the program you are creating, for example an ANC and a Child program.|
@@ -425,7 +422,7 @@ actions should be taken at each stage.
 
 > **Note**
 >
-> Changes to a program stage are not saved until you save the program.
+> Changes to a program stage is not saved until you save the program.
 
 1. Click the plus sign to create a program stage.
 2. Enter program stage details:
@@ -449,7 +446,7 @@ by the data capture apps to identify this program stage.
 
   | Option | Action |
  |---|---|
- | **Auto-generate event** |  Clear check box to prevent creating an event of this program  stage automatically when a entity is enrolled in the program.  |
+ | **Auto-generate event** |  Clear check box to prevent creating an event of this program  stage automatically when an entity is enrolled in the program.  |
  | **Open data entry form after enrollment** |  Select check box to automatically open the event of this  stage as soon as the entity has enrolled into the program.  |
  | **Report date to use** | If you have selected the  **Open data entry form after enrollment** check  box, also select a **Report date to use**:  **Date of incident** or  **Date of enrollment**.  <br>  This is the date used as report date for an event that has  been opened automatically.  <br>  <br>  If the **Report date to use** is selected as  one of those two ('incident date'/'enrollment date'), in  Dashboard, the 'Report date' of the event will be set as one  of those two.  |
  | **User assignment of events** |  Select check box to enable user assignment of the program  stage.  <br>  <br>  This means that in Tracker capture there will be a list of  users to which the event can be assigned.  |
@@ -460,9 +457,9 @@ by the data capture apps to identify this program stage.
  | **Hide due dates** | Select checkbox to hide due dates for events. |
  | **Feature type** |  Sets whether the program is going to capture a geographical  feature type or not.  <br>  * **None:** Nothing is captured.<br> * **Polygon:** An area is captured. For single  event programs the area will be the area representing the  event being captured. For tracker programs, the area will  represent the area of the enrollment. <br> * **Point:** A point/coordinate is captured. For  single event programs the point will be representing the  event being captured. For tracker programs, the point will  represent the enrollment. |
  | **Pre-generate event UID** | Select check box to pre-generate unique event id numbers. |
- | **Custom label for report date** | Defines the meaning of the report date in this program stage.<br>  <br>This description is displayed in the data entry form. |
- | **Custom label for due date** | Defines the meaning of the due date in this program stage. |
- | **Custom label for:**<br> - **event(s)** <br> - **program stage** | Renames standard DHIS2 terms for this program. These labels only affect how the terms are displayed in the user interface and do not change their meaning. Note: Only Event supports the plural form; Program Stage does not. Currently, these custom labels are used only by the DHIS2 Android app. |
+ | **Description of report date** | Type a description of the report date.<br>  <br>This description is displayed in the data entry form. |
+ | **Description of due date** | Type a description of the due date. |
+ | **Referral*** | Flag to indicate if program stage is referral or not. |
 
 5.  Assign data elements to program stage:
 
@@ -505,7 +502,7 @@ by the data capture apps to identify this program stage.
        3.  Add data elements by clicking the plus sign next to the data
            elements' names.
 
-       4.  Repeat the above steps until you have all the sections you need.
+       4.  Repeat above steps until you've all the sections you need.
 
        5.  Change the section order: click the options menu, then drag the
            section to the place you want.
@@ -529,7 +526,7 @@ available in the **Access** tab.
 Assign organization units:
 
 1.  In the organisation tree, double-click the organisation units you
-    want to add to the program.
+    want to add to the program to.
 
     You can locate an organisation unit in the tree by expanding the
     branches (click on the arrow symbol), or by searching for it by
@@ -615,8 +612,8 @@ template.
     |---|---|---|
     | Program enrollment | The program notification is sent when the TEI enrols in the program. | - |
     | Program completion | The program notification is sent when the program of TEI is completed | - |
-    | Days scheduled (incident date) | The program notification is sent XX number of days before or after the incident date | You need to enter the number of days before or after the scheduled date that the notification will be sent. |
-    | Days scheduled (enrollment date) | The program notification is sent XX number of days before or after the enrollment date | You need to enter the number of days before or after the scheduled date that the notification will be sent. |
+    | Days scheduled (incident date) | The program notification is sent XX number of days before or after the incident date | You need to enter the number of days before or after the scheduled date that the notification will be send. |
+    | Days scheduled (enrollment date) | The program notification is sent XX number of days before or after the enrollment date | You need to enter the number of days before or after the scheduled date that the notification will be send. |
     | Program Rule | Notification will be triggered as a result of program rule execution. | Program rule with ProgramRuleActionType.SENDMESSAGE need to be in place to make this trigger successful. |
 
 
@@ -678,7 +675,7 @@ template.
     | Trigger | Description | Note |
     |---|---|---|
     | Program stage completion | The program stage notification is sent when the program stage is completed | - |
-    | Days scheduled (due date) | The program stage notification is sent XX number of days before or after the due date | You need to enter the number of days before or after the scheduled date that the notification will be sent. |
+    | Days scheduled (due date) | The program stage notification is sent XX number of days before or after the due date | You need to enter the number of days before or after the scheduled date that the notification will be send. |
     | Program Rule | Notification will be triggered as a result of program rule execution. | Program rule with ProgramRuleActionType.SENDMESSAGE need to be in place to make this trigger successful. |
 
     1. **Allow notification to be sent multiple times**
@@ -765,7 +762,7 @@ Table: Program indicator components
 | Organisation unit field | Determines which organisation unit is assigned to program indicator values.<br><br> For Event programs (without registration) the options are:<br> * Event organisation unit (default): where the event took place<br> * any data elements of value type Organisation Unit (if any) assigned to the program<br><br> For Tracker programs (with registration) and analytics type *Enrollment* the options are:<br> * Registration organisation unit: where the tracked entity instance was created<br> * Enrollment organisation unit (default): where the tracked entity instance was enrolled in this program<br> * Owner at start organisation unit: where the tracked entity instance was owned at the start of the reporting period<br> * Owner at end organisation unit: where the tracked entity instance was owned at the end of the reporting period<br><br> For Tracker programs (with registration) and analytics type *Event* the options are:<br> * Event organisation unit (default): where the event took place<br>  * any data elements of value type Organisation Unit (if any) assigned to the program<br> * Registration organisation unit: where the tracked entity instance was created<br> * Enrollment organisation unit: where the tracked entity instance was enrolled in this program<br> * Owner at start organisation unit: where the tracked entity instance was owned at the start of the reporting period<br> * Owner at end organisation unit: where the tracked entity instance was owned at the end of the reporting period |
 | Analytics period boundaries | Defines the boundaries for the program indicator calculation. The boundaries determine which events or enrollments gets included in aggregations, always relative to the aggregate reporting period start and end. When creating the program indicator, the default boundaries will get preselected based on analytics type.<br> * For analytics type *event*, the default boundaries will be configured to encapsulate any events with an event date after the reporting period starts and before the reporting period ends.<br> * For analytics type *enrollment*, the default boundaries will encapsulate all enrollments with an enrollment date after the reporting date starts and before the reporting period ends. In addition, the default enrollment program indicator evaluates the newest event for all program stages regardless of date.<br> <br>It is possible to change the upper and lower boundaries to include a longer or shorter period relative to the reporting period, or delete one of the boundaries - in effect returning all data before or after a certain period. It is also possible to add more constraints, for example to make an enrollment program indicator only include event data up to a given point in time.<br> * Boundary target: Can be *incident date*, *event date*, *enrollment date* or *custom*. Designates what is being constrained by the boundary.<br> <br> *custom* is used make boundary that target either a date data element, tracked entity attribute or the presence of an event in a program stage. This is done with a custom expression on the form:<br> - Data element of type date: #{programStageUid.dataElementUid}.<br> `#{A03MvHHogjR.a3kGcGDCuk6}` <br> - Tracked entity attribute of type date: #{attributeUid}.<br> `A{GPkGfbmArby}` <br> - Presence of one event in a specific program stage: PS_EVENTDATE:programStageUid.<br> `PS_EVENTDATE:A03MvHHogjR`  <br> **Note**  This boundary target is only applicable to  Analytics type Enrollment <br> * Analytics period boundary type: Defines whether the boundary is an end boundary - starting with "before...", or a start boundary - "after...". Also defines whether the boundary relates to the end of the aggregate reporting period or the start of the aggregate reporting period.<br> * Offset period by amount: In some cases, for example cohort analytics, the boundary should be offset relative to the aggregate reporting period when running pivots and reports. The offset period by amount is used to move the current boundary either back(negative) or forward(positive) in time. The amount and period type together will determine how big the offset will be. An example can be when making a simple enrollment cohort program indicator for a 1 year cohort, it might be enough to offset each boundary of the program indicator with "-1" and "Years"<br> * Period type: See above. Can be any period, e.g. *Weekly* or *Quarterly*. |
 | Expression | The expression defines how the indicator is being calculated. The expression can contain references to various entities which will be substituted with a related values when the indicator is calculated:<br> * Data elements: Will be substituted with the value of the data element for the time period and organisation unit for which the calculation is done. Refers to both program stage and data element.<br> * Attributes: Will be substituted with the value of the attribute for the person / tracked entity for which the calculation is done.<br> * Variables: Will be substituted with special values linked to the program, including incident date and date of enrollment for the person, current date and count of values in the expression for the time period and organisation unit for which the calculation is done.<br> * Constants: Will be substituted with the value of the constant.<br> <br>The expression is a mathematical expression and can also contain operators.<br> <br>For single event programs and tracker programs with analytics type *event*, the expression will be evaluated *per event*, then aggregated according to its aggregation type.<br> <br>For tracker programs with analytics type *enrollment*, the expression will be evaluated *per enrollment*, then aggregated according to its aggregation type. |
-| Filter | The filter is applied to events and filters the data source used for the calculation of the indicator. I.e. the filter is applied to the set of events before the indicator expression is being evaluated. The filter must evaluate to either true or false. It filter is applied to each individual event. If the filter evaluates to true then the event is included later in the expression evaluation, if not it is ignored. The filter can, in a similar way as expressions, contain references to data elements, attributes and constants.<br> <br>The program indicator filter can in addition use logical operators. These operators can be used to form logical expressions which ultimately evaluate to either true or false. For example you can assert that multiple data elements must be a specific value, or that specific attributes must have numerical values less or greater than a constant. |
+| Filter | The filter is applied to events and filters the data source used for the calculation of the indicator. I.e. the filter is applied to the set of events before the indicator expression is being evaluated. The filter must evaluate to either true or false. The filter is applied to each individual event. If the filter evaluates to true then the event is included later in the expression evaluation, if not it is ignored. The filter can, in a similar way as expressions, contain references to data elements, attributes and constants.<br> <br>The program indicator filter can in addition use logical operators. These operators can be used to form logical expressions which ultimately evaluate to either true or false. For example you can assert that multiple data elements must be a specific value, or that specific attributes must have numerical values less or greater than a constant. |
 
 In the **Maintenance** app, you manage the following program indicator
 objects:
@@ -804,7 +801,7 @@ objects:
 
 5.  Select an **Aggregation type**.
 
-6.  Select if you want to **Display in form**.
+6.  Select a if you want to **Display in form**.
 
 7.  Assign one or multiple **Legend**s.
 
@@ -876,21 +873,12 @@ inline aggregation types looks like
 Note how the "sum" aggregation operator is used inside the expression
 itself.
 
-#### Adding comments in program indicator expression or filter
-Uniform syntax is supported for both singleline and multiline comments
-
-    d2:hasValue(#{mCXR7u4kNBW.NFkjsNiQ9PH}) /* this is comment */
-    
-    d2:hasValue(#{mCXR7u4kNBW.NFkjsNiQ9PH}) && /* this is 
-    comment */
-    d2:daysBetween(V{enrollment_date},PS_EVENTDATE:mCXR7u4kNBW)
-    
 #### Functions to use in a program indicator expression or filter
 
 The program indicator expression and filter support a range of
 functions. The functions can be applied to data elements and attributes:
 
- 
+
 
 Table: Functions to use in a program indicator expression or filter
 
@@ -1051,93 +1039,6 @@ A filter that uses both attributes and data elements looks like this:
 > page](http://commons.apache.org/proper/commons-jexl/reference/syntax.html)
 > to learn how you can create more sophisticated expressions
 
-## Setting up new Program disaggregation Mappings { #program_disaggregation_mapping } 
-
-DHIS2 v42 introduces the ability to assign Disaggregation Category Combinations to a Program Indicator and create a mapping between the program data and each category option contained in the combination. This creates a relationship between the tracker and aggregate data models which allows for analysing individual data in the same way and alongside aggregated data.
-
-![Program links to Category](resources/images/program/Program_to_category.png){ width=60% }
-![tracker and Aggregate Models](resources/images/program/Tracker_to_aggregate_model.png){ width=60% }
-
-The Program Indicator Disaggregation mappings, defined at the Program level, provide a connection between the two data models within DHIS2. This ultimately allows a user to create disaggregated views of program data within the Data Visualizer using a single Program Indicator where previously one for each disaggregation was needed.
-
-![Table Example](resources/images/program/Table_Example.png){ width=60% }
-
-1. Install or update the new Maintenance app (Preview)
-
-    If your instance does not already have the new version of the maintenance app installed go to the App Management App and search for Maintenance in the App Hub and install the app. If you already have it installed, then you should update the app to the latest version. Updates to this app are continuously released so it is good to make sure that you are using the most recent release.
-
-    ![Note Version 0.63.0 might be superseded by a newer version by the time you read this, update to the latest](resources/images/program/App_Management_Maintenance_App_Preview.png)
-
-
-2. Load the Program Disaggregation section of the Maintenance (Preview) App by selecting Program Disaggregations under the Other section or browsing to _yourinstanceurl_/apps/maintenance-preview#/programDisaggregations/
-
-    ![Program Disaggregation screen](resources/images/program/Maintenance_App_PI_Disaggregation.png)
-
-3. Select a Program from the drop down to enter the edit section and add Mappings to, for this example we will use the **Inpatient morbidity and mortality** program
-
-4. This will load the Program Indicator Mapping and Categories definition screen
-
-    ![Program Indicator Selection](resources/images/program/Edit_PI_DIsaggregation.png)
-
-3. Select a Program Indicator from the drop down list, in this example we will use **BMI**
-
-4. Under Disaggregation category combination Select **Gender and U5y** (you may need to create a new category combination containing the categories **Gender** and **Under 5/5 and above of age** if not present)
-
-    ![](resources/images/program/Disaggregation_Category.png)
-
-    Loading this category combination will display the Mapping selection drop down for each of the categories defined, as this is the first time these categories have been selected there are no mappings currently available.
-
-7. Under the Disaggregation categories section you should see both of the categories from the combination added as suggestion. Click **Add category** for both **Gender** and **U5y**
-
-    ![](resources/images/program/Disaggregation_Mappings.png)
-
-
-### Create the category mappings
-
-8. In the text field under each Category enter an expression using the Program Data Elements and Attributes that defines the category. The expression uses the same syntax as the Filter section of the Program Indicator creation screen.  It is recommended to open a Program Indicator within the Program you are mapping, use the Filter screen to construct the expression and then copy it into this field. This allows you to use the inbuilt expression validation of the Program Indicator filter builder.
-   [Program Indicator functions and Variale operators](https://docs.dhis2.org/en/use/user-guides/dhis-core-version-242/configuring-the-system/programs.html#program_indicator_functions_variables_operators)
-
-    ![](resources/images/program/Disaggregation_Mappings_Expanded.png)
-    ![](resources/images/program/Program_Indicator_Filter_Expression.png){ .center width=60% }
-
-    This example is linking the value selected in the **Gender** data element in the Program to the category option. Since the Option set in this case is a text field the expression is set to match the text ‘Female’. The next example for age shows a different way to define the relationship.
-
-    ![](resources/images/program/PI_Disaggregation_Gender_Mapping.png)
-
-    To add the mapping for the Under 5 years and 5 years and above, since it is a numerical field you can use the operators `>` `>=` `<` `<=` `==` `!=` to define the relationship
-
-    ![](resources/images/program/PI_Disaggregation_Age_Mapping.png)
-
-10. When mappings for all the category options are complete, click Save and exit
-
-
-11. Open Data Visualizer, first let’s look at how these data were previously displayed. To do this create a visualisation to show the data of the 5 existing Program indicators with the built in disaggregations shown below.
-
-    ![](resources/images/program/DV_Before.png){ .center width=60% }
-    
-    ![](resources/images/program/DV_Before2.png)
-
-12. Now remove the 4 Program Indicators with disaggregations specified and leave only the BMI Program Indicator.
-
-    ![](resources/images/program/DV_only_PI.png)
-
-14. You can now add **Gender** and **Under 5/5 and above of age** as disaggregation categories from the Your Dimensions column for the Program Indicator, click update and see the results.
-
-    ![](resources/images/program/DV_PI_Disaggregated.png)
-
-    You can now compare the data from the two separate program indicators and the single program indicator that has been disaggregated.
-
-### Transferring Program Indicator data via the Aggregate data exchange app
-
-In addition to viewing a disaggregated Program Indicator in the Data Visualiser you can now transfer the Program Data, via the Disaggregated Program indicator, into a Data Element that shares the same Category Combination.
-
-![](resources/images/program/PI_Disaggregation_Data_Exchange.png)
-
-By adding the ID of a Data Element in the **Data element for aggregate data export** field and then setting up the aggregate data exchange app* to transfer data you can save Program data in the aggregate data model
-
-![](resources/images/program/PI_Disaggregation_DE_for_Data_Exchange.png)
-
-
 ## Configure program rules { #configure_program_rule } 
 
 ### About program rules { #about_program_rules } 
@@ -1192,13 +1093,8 @@ objects:
 
 2.  Click the add button.
 
-3.  Select a **Program** and enter a **Name**
+3.  Select a **Program** and enter a **Name**.
 
-    Please note that the name of the program may not contain any of the following excluded keywords:
-    - `and`
-    - `or`
-    - `not`
-      
 4.  Select if you want to **Use code for option set**.
 
     This option is only effective when the data element or tracked
@@ -1218,11 +1114,11 @@ objects:
 
     | Source type | Description |
     |---|---|
-    | **Data element from the newest event for a program stage** | This source type works the same way as **Data element from the newest event in the current program**, except that it only evaluates values from one program stage.<br>     <br>This source type can be useful in program rules where the same data element is used in several program stages, and a rule needs to evaluate the newest data value from within one specific stage. <br>     <br>In order to know what event is the newest, the report date (event date) is used. If you have many events with the same report date, the system choose the one with the latest createdAt property of the event.|
-    | **Data element from the newest event in the current program** | This source type is used when a program rule variable needs to reflect the newest known value of a data element, regardless of what event the user currently has open.<br>     <br>This source type is populated slightly differently in **Tracker Capture** and **Event Capture** apps:<br>     <br>**Tracker Capture**: the program rule variable will be populated with the newest data value collected for the given data element within the enrollment.<br>     <br>**Event Capture**: the program rule variable will be populated with the current events data. <br>**NB** Future dates are "newer" than current or past dates. <br>     <br>In order to know what event is the newest, the report date (event date) is used. If you have many events with the same report date, the system choose the one with the latest createdAt property of the event.|
+    | **Data element from the newest event for a program stage** | This source type works the same way as **Data element from the newest event in the current program**, except that it only evaluates values from one program stage.<br>     <br>This source type can be useful in program rules where the same data element is used in several program stages, and a rule needs to evaluate the newest data value from within one specific stage. |
+    | **Data element from the newest event in the current program** | This source type is used when a program rule variable needs to reflect the newest known value of a data element, regardless of what event the user currently has open.<br>     <br>This source type is populated slightly differently in **Tracker Capture** and **Event Capture** apps:<br>     <br>**Tracker Capture**: the program rule variable will be populated with the newest data value collected for the given data element within the enrollment.<br>     <br>**Event Capture**: the program rule variable will be populated with the current events data. <br>**NB** Future dates are "newer" than current or past dates. |
     | **Data element in current event** | Program rule variables with this source type will contain the data value from the same event that the user currently has open.<br>     <br>This is the most commonly used source type, especially for skip logic (hide actions) and warning/error rules. |
     | **Data element from previous event** | Program rule variables with this source type will contain the value from a specified data element from a previous event. Only older events is evaluated, not including the event that the user currently has open.<br>     <br>This source type is commonly used when a data element only should be collected once during an enrollment, and should be hidden in subsequent events.<br>     <br>Another use case is making rules for validating input where there is an expected progression from one event to the next - a rule can evaluate whether the previous value is higher/lower and give a warning if an unexpected value is entered. |
-    | **Calculated value** | Program rule variable with this source type is not connected directly to any form data - but will be populated as a result of some other program rules **ASSIGN** action.<br>     <br>This variable will be used for making preliminary calculations, having a **ASSIGN** program rule action and assigning a value, this value can be used by other program rules - potentially making the expressions simpler and more maintainable.<br>     <br>These variables will not be persisted and will stay in memory only during the execution of the set of program rules. Any program rule that assigns a data value to a preliminary calculated value would normally also have a **priority** assigned - to make sure that the preliminary calculation is done before the rule that consumes the calculated value. |
+    | **Calculated value** | Program rule variable with this source type is not connected directly to any form data - but will be populated as a result of some other program rules **ASSIGN** action.<br>     <br>This variable will be used for making preliminary calculations, having a **ASSIGN** program rule action and assigning a value, this value can be used by other program rules - potentially making the expressions simpler and more maintanable.<br>     <br>These variables will not be persisted and will stay in memory only during the execution of the set of program rules. Any program rule that assigns a data value to a preliminary calculated value would normally also have a **priority** assigned - to make sure that the preliminary caculation is done before the rule that consumes the calculated value. |
     | **Tracked entity attribute** | Populates the program rule variable with a specified tracked entity attribute for the current enrollment.<br>     <br>Use this is the source type to create program rules that evaluate data values entered during registration.<br>     <br>This source type is also useful when you create program rules that compare data in events to data entered during registration.<br>     <br>This source type is only used for tracker programs (programs with registration). |
 
 6.  Click **Save**.
@@ -1289,7 +1185,7 @@ objects:
 
 
         | Action type | Required settings | Description |
-        |---|---|---|
+        |----|---|---|
         | **Assign value** | **Data element to assign value to**<br> <br> **Tracked entity attribute to assign value to**<br>          <br>**Program rule variable to assign value to**<br>         <br>**Expression to evaluate and assign** | Used to help the user calculate and fill out fields in the data entry form. The idea is that the user shouldn’t have to fill in values that the system can calculate, for example BMI.<br>         <br>When a field is assigned a value, the user sees the value but the user can't edit it.<br> <br>  NOTE: To assign a value to a tracked entity attribute, the user needs to open the tracked entity profile widget for the rule to trigger.   <br>     <br>Example from Immunization stock card i Zambia: The data element for vaccine stock outgoing balance is calculated based on the data element for incoming stock balance minus the data elements for consumption and wastage.<br>         <br>Advanced use: configure an 'assign value' to do a part of a calculation and then assign the result of the calculation to a program rule variable. This is the purpose with the "Calculated value" program rule variable. |
         | **Display text** | **Display widget**<br>         <br>**Static text**<br>         <br>**Expression to evaluate and display after static text** | Used to display information that is not an error or a warning, for example feedback to the user. You can also use this action to display important information, for example the patient's allergies, to the user. |
         | **Display key/value pair** | **Display widget**<br>         <br>**Key label**<br>         <br>**Expression to evaluate and display as value** | Used to display information that is not an error or a warning.<br>         <br>Example: calculate number of weeks and days in a pregnancy and display it in the format the clinician is used to see it in. The calculation is based on previous recorded data. |
@@ -1303,8 +1199,7 @@ objects:
         | **Warning on complete** | **Data element to display warning next to**<br>         <br>**Tracked entity attribute to display warning next to**<br>         <br>**Static text**<br>         <br>**Expression to evaluate and display after static text** | Used to give the user a warning if he/she tries to complete inconsistent data, but at the same time to allow the user to continue. The warning is shown in a dialog when the user completes the form.<br>         <br>**Static text** defines the message shown to the user when the expression is true and the action is triggered. This field is mandatory.<br>         <br>You can select which data element or tracked entity attribute to link the error to. This will help the user to fix the error.<br>         <br>If you don't select a data element or a tracked entity attribute to display the error next to, make sure you write a comprehensive error message that helps the user to fix the error. |
         | **Send Message** | **Message template to send** | Send Message triggers a notification based on provided message template. This action will be taken immediately. The message template will be parsed and variables will be substituted with actual values. |
         | **Schedule Message** | **Message template to send**<br>         <br>**Data field which contains expression to evaluate the date which notification should be sent at. If this expression results in any value other than Date, then resultant will be discarded and notification will not get scheduled.** | Schedule Message will schedule notification at date provided by Expression in the data field. Sample expression is given below<br>         d2:addDays( '2018-04-20', '2' )         <br>Message template will be parsed and variables will be substituted with actual values. |
-        | **Schedule event** | **Program stage to schedule event for**<br>         <br>**Expression to evaluate the scheduled date** | Automatically schedules a new event for the specified program stage on the date returned by the expression. The expression must evaluate to a valid date; if it does not, no event will be scheduled.<br>         <br>The event is only scheduled once — if the rule condition evaluates to true again, no duplicate event is created.<br>         <br>Useful for programs where the timing of the next visit or follow-up can be derived from existing data, for example scheduling a second vaccination dose a fixed number of days after the first.<br>         <br>Example expression that schedules an event 28 days after a recorded date:<br>         `d2:addDays(#{dateOfFirstDose}, 28)` |
-        | **Hide option** | **Data element to hide option for**<br>         <br>**Tracked entity attribute to hide option for**<br>         <br>**Option that should be hidden** | Used to selectively hide a single option for an option set in a given data element/tracked entity attribute.<br>         <br>When combined with **show option group** the **hide option** takes precedence. |
+        | **Hide option** | **Data element to hide option for**<br>         <br>**Tracked entity attribute to hide option for**<br>         <br>**Option that should be hidden** | Used to selectively hide a single option for an option set in a given data element/tracked entity attribute.<br>         <br>When combined with **show option group** the **hide option** takes presedence. |
         | **Hide option group** | **Data element to hide option group for**<br>         <br>**Tracked entity attribute to hide option group for**<br>         <br>**Option group that should be hidden** | Used to hide all options in a given option group and data element/tracked entity attribute.<br>         <br>When combined with **show option group** the **hide option group** takes precedence. |
         | **Show option group** | **Data element to show option group for**<br>         <br>**Tracked entity attribute to show option group for**<br>         <br>**Option group that should be shown** | Used to show only options from a given option group in a given data element/tracked entity attribute. To show an option group implicitly hides all options that is not part of the group(s) that is shown. |
 
@@ -1321,7 +1216,7 @@ objects:
 > You can view all examples on the demo server:
 > <https://play.dhis2.org/dev/dhis-web-maintenance/#/list/programSection/programRule>
 
-This example shows how to configure a program rule which calculates
+This example shows how to configure a program rule which calculate
 number of weeks and days in a pregnancy and display the result in the
 format the clinician is used to see it in. The calculation is based on
 previous recorded
@@ -1388,11 +1283,6 @@ date".
 
 ### Reference information: Operators and functions to use in program rule expression { #program_rules_operators_functions } 
 
-> **Note**
->
-> When using absolute dates in program rule expressions, always use
-> 'YYYY-MM-DD' date format irrespective of the System Date format setting.
-
 > **Tip**
 >
 > You can nest functions within each other and with sub-expressions to
@@ -1454,41 +1344,38 @@ Table: Custom functions to use in a program rule expression
 
 | Function | Arguments | Description |
 |---|---|---|
-| d2:addDays | (date, number) | Produces a date based on the first argument date, adding the second argument number of days. <br>An example calculating the pregnancy due date based on the last menstrual period:<br> `d2:addDays(#{lastMenstrualDate},'283')` |
 | d2:ceil | (number) | Rounds the input argument **up** to the nearest whole number. <br>Example:<br> `d2:ceil(#{hemoglobinValue})` |
-| d2:concatenate | (object, [,object, object,...]) | Produces a string concatenated string from the input parameters. Supports any number of parameters. Will mainly be in use in future action types, for example to display gestational age with `d2:concatenate('weeks','+','gestationalageDays')`. |
-| d2:contains | (text,text, ...) | Searches an expression for one or more substrings. Returns true if the expression contains all the substrings. For example, the following are all `true`: `contains("abcd", "abcd")`; `contains("abcd", "b")`; and `contains("abcd", "ab", "bc")`. Comparisons are case-sensitive. |
-| d2:containsItems | (text,text, ...) | Searches an expression for one or more items. The expression is made up of comma-separated elements. containsItems returns true if every item exactly matches an element in the expression. For example, `containsItems("abcd", "abcd")` and `containsItems("ab,cd", "ab", "cd")` are `true`, but `containsItems("abcd", "b")` and `containsItems("abcd", "ab", "bc")` are `false`. Comparisons are case-sensitive. containsItems can be used for multi-valued data elements to see if an item is contained in the data element values. |
-| d2:count | (sourcefield) | Counts the number of values that is entered for the source field in the argument. The source field parameter is the name of one of the defined source fields in the program - see example <br>Example usage where `#{previousPregnancyOutcome}` is one of the source fields in a repeatable program stage "previous pregnancy":<br> `d2:count('previousPregnancyOutcome')` |
-| d2:countIfValue | (sourcefield,text) | Counts the number of matching values that is entered for the source field in the first argument. Only occurrences that matches the second argument is counted. The source field parameter is the name of one of the defined source fields in the program - see example. <br>Example usage where `#{previousPregnancyOutcome}` is one of the source fields in a repeatable program stage "previous pregnancy". The following function will produce the number of previous pregnancies that ended with abortion:<br> `d2:countIfValue('previousPregnancyOutcome','Abortion')` |
-| d2:countIfZeroPos | (sourcefield) | Counts the number of values that is zero or positive entered for the source field in the argument. The source field parameter is the name of one of the defined source fields in the program - see example. <br>Example usage where `#{fundalHeightDiscrepancy}` is one of the source fields in program, and it can be either positive or negative. The following function will produce the number of positive occurrences:<br> `d2:countIfZeroPos('fundalHeightDiscrepancy')` |
-| d2:daysBetween | (date, date) | Produces the number of days between the first and second argument. When the first argument date comes before the second argument date, the number will be positive - in the opposite case, the number will be negative. The static date format is 'yyyy-MM-dd'. <br>Example, calculating the gestational age(in days) of a woman, based on the last menstrual period and the current event date:<br> `d2:daysBetween(#{lastMenstrualDate},V{event_date})` |
-| d2:extractDataMatrixValue | Get GS1 value based on application identifier |  Given a field value formatted with the gs1 data matrix standard and a string key from the GS1 application identifiers. The function looks and returns the value linked to the provided key. <br>Example expression:<br> `d2:extractDataMatrixValue( 'gtin', A{GS1 Value} )` |
-| d2:floor | (number) | Rounds the input argument **down** to the nearest whole number. <br>An example producing the number of weeks the woman is pregnant. Notice that the sub-expression `#{gestationalAgeDays}/7` is evaluated before the floor function is executed:<br> `d2:floor(#{gestationalAgeDays}/7)` |
-| d2:hasUserRole | (user role) | Returns true if current user has this role otherwise false <br>Example expression:<br> `d2:hasUserRole('UYXOT4A3ASA')` |
-| d2:hasValue | (sourcefield) | Evaluates to true of the argument source field contains a value, false if no value is entered. <br>Example usage, to find if the source field #{currentPregnancyOutcome} is yet filled in:<br> `d2:hasValue('currentPregnancyOutcome')` |
-| d2:inOrgUnitGroup | (text) | Evaluates whether the current organisation unit is in the argument group. The argument can be defined with either ID or organisation unit group code. The current organisation unit will be the event organisation unit when the rules is triggered in the context of an event, and the enrolling organisation unit when the rules is triggered in the event of a TEI registration form. <br>Example expression:<br> `d2:inOrgUnitGroup('HIGH_RISK_FACILITY')` |
-| d2:inUserGroup | (text) | Returns true if current user is part of this user group otherwise false. The user group is defined by the ID. <br>Example expression:<br> `d2:inUserGroup('HrXOT4trAFG')` |
-| d2:lastEventDate | Get the last event date for entered data | Gets the event date when the underlying data element was entered in the previous event in a program stage |
-| d2:left | (text, num-chars) | Evaluates to the left part of a text, num-chars from the first character. <br>The text can be quoted or evaluated from a variable:<br> `d2:left(#{variableWithText}, 3)` |
-| d2:length | (text) | Find the length of a string. <br>Example:<br> `d2:length(#{variableWithText})` |
-| d2:maxValue | Get maximum value for provided item | Function gets maximum value of provided data element across entire enrollment. <br>Example expression:<br> `d2:maxValue( 'blood-pressure' )` |
-| d2:minValue | Get minimum value for provided item | Function gets minimum value of provided data element across entire enrollment. <br>Example expression:<br> `d2:minValue( 'blood-pressure' )` |
+| d2:floor | (number) | Rounds the input argument **down** to the nearest whole number. <br>An example producing the number of weeks the woman is pregnant. Notice that the sub-expression #{gestationalAgeDays}/7 is evaluated before the floor function is executed:<br> `d2:floor(#{gestationalAgeDays}/7)` |
+| d2:round | (number [, decimals]) | Rounds the input argument to the nearest integer. An optional second argument can be provided to specify a number of decimal places to which the number is to be rounded. <br>Example: d2:round(1.25, 1) = 1.3 |
 | d2:modulus | (number,number) | Produces the modulus when dividing the first with the second argument. <br>An example producing the number of days the woman is into her current pregnancy week:<br> `d2:modulus(#{gestationalAgeDays},7)` |
-| d2:monthsBetween | (date, date) | Produces the number of full months between the first and second argument. When the first argument date comes before the second argument date, the number will be positive - in the opposite case, the number will be negative. The static date format is 'yyyy-MM-dd'. |
+| d2:zing | (number) | Evaluates the argument of type number to zero if the value is negative, otherwise to the value itself. |
 | d2:oizp | (number) | Evaluates the argument of type number to one if the value is zero or positive, otherwise to zero. |
+| d2:concatenate | (object, [,object, object,...]) | Produces a string concatenated string from the input parameters. Supports any number of parameters. Will mainly be in use in future action types, for example to display gestational age with d2:concatenate('weeks','+','gestationalageDays'). |
+| d2:daysBetween | (date, date) | Produces the number of days between the first and second argument. When the first argument date comes before the second argument date, the number will be positive - in the opposite case, the number will be negative. The static date format is 'yyyy-MM-dd'. <br>Example, calculating the gestational age(in days) of a woman, based on the last menstrual period and the current event date:<br> `d2:daysBetween(#{lastMenstrualDate},V{event_date})` |
+| d2:weeksBetween | (date, date) | Produces the number of full weeks between the first and second argument. When the first argument date comes before the second argument date, the number will be positive - in the opposite case, the number will be negative. The static date format is 'yyyy-MM-dd'. |
+| d2:monthsBetween | (date, date) | Produces the number of full months between the first and second argument. When the first argument date comes before the second argument date, the number will be positive - in the opposite case, the number will be negative. The static date format is 'yyyy-MM-dd'. |
+| d2:yearsBetween | (date, date) | Produces the number of years between the first and second argument. When the first argument date comes before the second argument date, the number will be positive - in the opposite case, the number will be negative. The static date format is 'yyyy-MM-dd'. |
+| d2:addDays | (date, number) | Produces a date based on the first argument date, adding the second argument number of days. <br>An example calculating the pregnancy due date based on the last menstrual period:<br> `d2:addDays(#{lastMenstrualDate},'283')` |
+| d2:count | (sourcefield) | Counts the number of values that is entered for the source field in the argument. The source field parameter is the name of one of the defined source fields in the program - see example <br>Example usage where #{previousPregnancyOutcome} is one of the source fields in a repeatable program stage "previous pregnancy":<br> `d2:count('previousPregnancyOutcome')` |
+| d2:countIfValue | (sourcefield,text) | Counts the number of matching values that is entered for the source field in the first argument. Only occurrences that matches the second argument is counted. The source field parameter is the name of one of the defined source fields in the program - see example. <br>Example usage where #{previousPregnancyOutcome} is one of the source fields in a repeatable program stage "previous pregnancy". The following function will produce the number of previous pregnancies that ended with abortion:<br> `d2:countIfValue('previousPregnancyOutcome','Abortion')` |
+| d2:countIfZeroPos | (sourcefield) | Counts the number of values that is zero or positive entered for the source field in the argument. The source field parameter is the name of one of the defined source fields in the program - see example. <br>Example usage where #{fundalHeightDiscrepancy} is one of the source fields in program, and it can be either positive or negative. The following function will produce the number of positive occurrences:<br> `d2:countIfZeroPos('fundalHeightDiscrepancy')` |
+| d2:hasValue | (sourcefield) | Evaluates to true of the argument source field contains a value, false if no value is entered. <br>Example usage, to find if the source field #{currentPregnancyOutcome} is yet filled in:<br> `d2:hasValue('currentPregnancyOutcome')` |
+| d2:zpvc | (object, [,object, object,...]) | Returns the number of numeric zero and positive values among the given object arguments. Can be provided with any number of arguments. |
+| d2:validatePattern | (text, regex-pattern) | Evaluates to true if the input text is an exact match with the supplied regular expression pattern. The regular expression needs to be escaped. <br>Example expression, triggering actions if a number is not on the pattern 9999/99/9:<br> `!d2:validatePattern(A{nrc},'\\d{6}\/\\d{2}\/\\d')` <br>Example expression, triggering actions that if the address is not consisting of letters or white spaces, then a white space, then a number:<br> `!d2:validatePattern(A{registrationAddress},'[\\w ]+ \\d+')` <br>Example, triggering actions if a name contains any numbers:<br> `!d2:validatePattern(A{name},'[^\\d]*')` <br>Example expression, triggering actions if a mobile number contains the illegal number sequence 555:<br> `d2:validatePattern(A{mobile} ,'.*555.*')` |
+| d2:left | (text, num-chars) | Evaluates to the left part of a text, num-chars from the first character. <br>The text can be quoted or evaluated from a variable:<br> `d2:left(#{variableWithText}, 3)` |
 | d2:right | (text, num-chars) | Evaluates to the right part of a text, num-chars from the last character. <br>The text can be quoted or evaluated from a variable:<br> `d2:right(#{variableWithText}, 2)` |
-| d2:round | (number [, decimals]) | Rounds the input argument to the nearest integer. An optional second argument can be provided to specify a number of decimal places to which the number is to be rounded. <br>Example: `d2:round(1.25, 1)` = 1.3 |
 | d2:substring | (text, start-char-num, end-char-num) | Evaluates to the part of a string specified by the start and end character number. <br>Example expression:<br> `d2:substring(#{variableWithText}, 1, 3)` If the #{variableWithText} in the above example was 'ABCD', then the result of the evaluation would be 'BC' |
 | d2:split | (text, delimiter, element-num) | Split the text by delimiter, and keep the nth element(0 is the first). <br>The text can be quoted or evaluated from a variable, the delimiter must be quoted:<br> `d2:split(#{variableWithText}, '-', 1)` <br>Note: comma delimiter(,) is not supported. |
-| d2:validatePattern | (text, regex-pattern) | Evaluates to true if the input text is an exact match with the supplied regular expression pattern. The regular expression needs to be escaped. <br>Example expression, triggering actions if a number is not on the pattern 9999/99/9:<br> `!d2:validatePattern(A{nrc},'\\d{6}\/\\d{2}\/\\d')` <br>Example expression, triggering actions that if the address is not consisting of letters or white spaces, then a white space, then a number:<br> `!d2:validatePattern(A{registrationAddress},'[\\w ]+ \\d+')` <br>Example, triggering actions if a name contains any numbers:<br> `!d2:validatePattern(A{name},'[^\\d]*')` <br>Example expression, triggering actions if a mobile number contains the illegal number sequence 555:<br> `d2:validatePattern(A{mobile} ,'.*555.*')` |
-| d2:weeksBetween | (date, date) | Produces the number of full weeks between the first and second argument. When the first argument date comes before the second argument date, the number will be positive - in the opposite case, the number will be negative. The static date format is 'yyyy-MM-dd'. |
-| d2:yearsBetween | (date, date) | Produces the number of years between the first and second argument. When the first argument date comes before the second argument date, the number will be positive - in the opposite case, the number will be negative. The static date format is 'yyyy-MM-dd'. |
-| d2:zing | (number) | Evaluates the argument of type number to zero if the value is negative, otherwise to the value itself. |
-| d2:zpvc | (object, [,object, object,...]) | Returns the number of numeric zero and positive values among the given object arguments. Can be provided with any number of arguments. |
+| d2:length | (text) | Find the length of a string. <br>Example:<br> `d2:length(#{variableWithText})` |
+| d2:inOrgUnitGroup | (text) | Evaluates whether the current organisation unit is in the argument group. The argument can be defined with either ID or organisation unit group code. The current organisation unit will be the event organisation unit when the rules is triggered in the context of an event, and the enrolling organisation unit when the rules is triggered in the event of a TEI registration form. <br>Example expression:<br> `d2:inOrgUnitGroup('HIGH_RISK_FACILITY')` |
+| d2:hasUserRole | (user role) | Returns true if current user has this role otherwise false <br>Example expression:<br> d2:hasUserRole('UYXOT4A3ASA') |
 | d2:zScoreWFA | Z-Score weight for age indicator | Calculates z-score based on data provided by WHO weight-for-age indicator. e varies between -3.5 to 3.5 depending upon the value of weight. <br>Example expression:<br> `d2:zScoreWFA( ageInMonths, weight, gender )`  <br> **Gender** > Gender is considered female by default. Any of the following codes can > be used to denote male: 'Male', 'MALE', 'male', 'ma', 'm', 'M', 0, false |
 | d2:zScoreHFA | Z-Score height for age indicator | Calculates z-score based on data provided by WHO height-for-age indicator. Its value varies between -3.5 to 3.5 depending upon the value of height. <br>Example expression:<br> `d2:zScoreHFA( ageInMonths, height, gender )` |
 | d2:zScoreWFH | Z-Score weight for height indicator | Calculates z-score based on data derived from the WHO weight-for-length and weight-for-height indicators. The data used for girls can be found [here](https://github.com/dhis2/dhis2-docs/blob/master/src/commonmark/en/content/user/resources/txt-files/zScoreWFH-girls-table.txt) and for boys [here](https://github.com/dhis2/dhis2-docs/blob/master/src/commonmark/en/content/user/resources/txt-files/zScoreWFH-boys-table.txt). Its value varies between -3.5 to 3.5 depending upon the value of the weight. <br>Example expression:<br> `d2:zScoreWFH( height, weight, gender )` |
+| d2:minValue | Get minimum value for provided item | Function gets minimum value of provided data element across entire enrollment. <br>Example expression:<br> `d2:minValue( 'blood-pressure' )` |
+| d2:maxValue | Get maximum value for provided item | Function gets maximum value of provided data element across entire enrollment. <br>Example expression:<br> `d2:maxValue( 'blood-pressure' )` |
+| d2:lastEventDate | Get the last event date for entered data | Gets the event date when the underlying data element was entered in the previous event in a program stage |
+| d2:extractDataMatrixValue | Get GS1 value based on application identifier |  Given a field value formatted with the gs1 data matrix standard and a string key from the GS1 application identifiers. The function looks and returns the value linked to the provided key. <br>Example expression:<br> `d2:extractDataMatrixValue( 'gtin', A{GS1 Value} )` |
 
 
 Table: Data matrix codes
@@ -1691,9 +1578,8 @@ Table: Standard variables to use in program rule expressions
 | V{event_count} | (number) | Contains the total number of events in the enrollment. |
 | V{enrollment_date} | (date) | Contains the enrollment date of the current enrollment. Will not have a value for single event programs. |
 | V{incident_date} | (date) | Contains the incident date of the current enrollment. Will not have a value for single event programs. |
-| V{enrollment_id} | (string) | Universal identifier string (UID) of the current enrollment. Will not have a value for single event programs. |
-| V{enrollment_status} | (string) | Contains status of the current enrollment. <br>It can be ACTIVE, COMPLETED or CANCELLED. Example expression to check status is:<br> `V{enrollment_status} == 'COMPLETED'` |
-| V{event_id} | (string) | Universal identifier string (UID) of the current event context. Will not have a value at the moment the rule is executed as part of the registration form. |
+| V{enrollment_id} | (string) | Universial identifier string(UID) of the current enrollment. Will not have a value for single event programs. |
+| V{event_id} | (string) | Universial identifier string(UID) of the current event context. Will not have a value at the moment the rule is executed as part of the registration form. |
 | V{orgunit_code} | (string) | Contains the code of the orgunit that is linked to the current enrollment. For single event programs the code from the current event orgunit will be used instead. <br>Example expression to check whether orgunit code starts with WB_:<br> `d2:left(V{orgunit_code},3) == 'WB_'` |
 | V{environment} | (string) | Contains a code representing the current runtime environment for the rules. The possible values is "WebClient", "AndroidClient" and "Server". Can be used when a program rule is only supposed to run in one or more of the client types. |
 | V{program_stage_id} | (string) | Contains the ID of the current program stage that triggered the rules. This can be used to run rules in specific program stages, or avoid execution in certain stages. When executing the rules in the context of a TEI registration form the variable will be empty. |
@@ -1704,15 +1590,9 @@ Table: Standard variables to use in program rule expressions
 
 ### About relationship types { #about_relationship_types } 
 
-A relationship represents a link between two entities in the Tracker-model. A relationship is considered data in DHIS2 and is based on a Relationship Type, similar to how a Tracked Entity is based on a Tracked Entity Type.
+A relationship represents a link between two entities in the Tracker-model. A relationship is considered data in DHIS2 and is based on a Relationship Type, similar to how a Tracked Entity Instance is based on a Tracked Entity Type.
 
-Relationships always include two entities, and these entities can include Tracked Entities, Enrollments and Events, and any combination of these. 
-
-> [!NOTE]
-> Note that not all of these combinations are available in the current apps. Currently in the Capture app, you can create:
-> * Tracked Entity to Tracked Entity Relationships
-> * Event in Event Programs to Tracked Entity Relationships (Only from the Event side)
-> * Event in one Program Stage to Event in another Program Stage in the same Program (Related stages - see more information [here](https://docs.dhis2.org/en/use/user-guides/dhis-core-version-241/tracking-individual-level-data/capture.html#related-stages-and-linked-events-for-tracker-programs))
+Relationships always include two entities, and these entities can include Tracked Entity Instances, Enrollments and Events, and any combination of these. Note that not all of these combinations are available in the current apps.
 
 In addition, relationships can be defined as unidirectional or bidirectional. The only functional difference is currently that these requires different levels of access to create. Unidirectional relationships requires the user to have data write access to the “from” entity and data read access for the “to” entity, while bidirectional relationships require data write access for both sides.
 
@@ -1733,13 +1613,13 @@ For more information about configuration and the meaning of 'From constraint' an
 
 6. (Optional) Select whether the relationship should be bidirectional
 
-7. Provide **Relationship name seen from initiating entity**. This is the name of the relationship that will be shown in the Data Entry app at the 'left' side of the relationship. E.g. in a Mother-child relationship this could be 'Mother of'.
+7. Provide **Relationship name seen from inititating entity**. This is the name of the relationship that will be shown in the Data Entry app at the 'left' side of the relationship. E.g. in a Mother-child relationship this could be 'Mother of'.
 
 8. (Optional) Provide **Relationship name seen from receiving entity**. This is the name of the relationship that will be shown at the 'right' side of the relationship in the Data Entry app. E.g. in a Mother-child relationship this could be 'Mother'.
 
 9.  Select a 'From constraint'. This limits what kind of entities can be included in the relationship. [Relationship model](#relationship_model_relationship_type). After selecting a 'From constraint', you have the option to choose which attributes or data elements should be shown in the relationship widget in Tracker Capture and Capture for the "From constraint". The list will vary based on the constraint:
     * When selecting “Tracked Entity Instance”, then a Tracked Entity Type only, choose between the configured Tracked Entity Type Attributes
-    * When selecting “Tracked Entity Instance”, then a Tracked Entity Type and a Program, choose between the attributes that have been configured for both the Tracked Entity Type and for the Program
+    * When selecting “Tracked Entity Instance”, then a Tracked Entity Type and a Program, choose between the the attributes that have been configured for both the Tracked Entity Type and for the Program
     * When selecting “Enrollment in program”, choose between the attributes that have been configured for the Program
     * When selecting “Event in program or program stage”, choose between the data elements that have been configured for that Event program or Program stage
 
@@ -1751,13 +1631,13 @@ For more information about configuration and the meaning of 'From constraint' an
 
 ### About tracked entity types { #about_tracked_entity } 
 
-A tracked entity is a type of entity which can be tracked through the
+A tracked entity is a types of entities which can be tracked through the
 system. It can be anything from persons to commodities, for example a
 medicine or a person.
 
 A program must have one tracked entity. To enroll a tracked entity
-instance into a program, the tracked entity type of the entity and
-the tracked entity type of the program must be the same.
+instance into a program, the tracked entity type and tracked
+entity type of a program must be the same.
 
 Tracked entity attributes are used to register extra information for a
 tracked entity. Tracked entity attributes can be shared between
@@ -1805,49 +1685,50 @@ programs.
 
     | Value type | Description |
     |---|---|
-    | Age | Dates rendered as calendar widget OR by entering number of years, months and/or days which calculates the date value based on current date. The date will be saved in the backend. |
+    | Age | - |
     | Coordinate | A point coordinate specified as longitude and latitude in decimal degrees. All coordinate should be specified in the format "-19.23 , 56.42" with a comma separating the longitude and latitude. |
     | Date | Dates render as calendar widget in data entry. |
-    | Date & time | Is a combination of the **DATE** and **TIME** data elements.  |
-    | E-mail | Valid email address. |
+    | Date & time | - |
+    | E-mail | - |
     | File | A file resource where you can store external files, for example documents and photos. |
-    | Image | A file resource where you can store photos.<br>     <br>Unlike the **FILE** data element, the **IMAGE** data element can display the uploaded image directly in forms. |
+    | Image | Similar to File, but restricted to images. |
     | Integer | Any whole number (positive and negative), including zero. |
-    | Letter | A single letter. |
-    | Long text | Textual value. Renders as text area with no length constraint in forms. |
+    | Letter | - |
+    | Long text | Textual value. Renders as text area in forms. |
     | Negative integer | Any whole number less than (but not including) zero. |
     | Number | Any real numeric value with a single decimal point. Thousands separators and scientific notation is not supported. |
     | Percentage | Whole numbers inclusive between 0 and 100. |
-    | Phone number | Phone number.|
+    | Phone number ||
     | Positive integer | Any whole number greater than (but not including) zero. |
     | Positive of zero integer | Any positive whole number, including zero. |
-    | Organisation unit | Organisation units rendered as a hierarchy tree widget.<br>     <br>If the user has assigned "search organisation units", these will be displayed instead of the assigned organisation units.  |
+    | Organisation unit | - |
     | Unit interval | Any real number greater than or equal to 0 and less than or equal to 1. |
     | Text | Textual value. The maximum number of allowed characters per value is 50,000. |
     | Time | Time is stored in HH:mm format.<br>     <br>HH is a number between 0 and 23<br>     <br>mm is a number between 00 and 59 |
-    | Username |  DHIS2 user. Rendered as a dialog with a list of users and a search field. The user will need the "View User" authority to be able to utilise this data type. |
+    | Tracker associate | - |
+    | Username |  Rendered as a dialog with a list of users and a search field. The user will need the "View User" authority to be able to utilise this data type |
     | Yes/No | Boolean values, renders as drop-down lists in data entry. |
     | Yes only | True values, renders as check-boxes in data entry. |
 
-10.  Select an **Aggregation type**.
+9.  Select an **Aggregation type**.
 
 
 
-       Table: Aggregation operators
+    Table: Aggregation operators
 
-| Aggregation operator | Description |
-|---|---|
-| Average | Average the values in both the period and the organisation unit dimensions. |
-| Average (sum in organisation unit hierarchy) | Average of data values in the period dimension, sum in the organisation unit dimensions. |
-| Count | Count of data values. |
-| Min | Minimum of data values. |
-| Max | Maximum of data values. |
-| None | No aggregation is performed in any dimension. |
-| Sum | Sum of data values in the period and organisation unit dimension. |
-| Standard deviation | Standard deviation (population-based) of data values. |
-| Variance | Variance (population-based) of data values. |
-program
-12. Select **Unique** to specify that the values of the tracked entity
+    | Aggregation operator | Description |
+    |---|---|
+    | Average | Average the values in both the period as and the organisation unit dimensions. |
+    | Average (sum in organisation unit hierarchy) | Average of data values in the period dimension, sum in the organisation unit dimensions. |
+    | Count | Count of data values. |
+    | Min | Minimum of data values. |
+    | Max | Maximum of data values. |
+    | None | No aggregation is performed in any dimension. |
+    | Sum | Sum of data values in the period and organisation unit dimension. |
+    | Standard deviation | Standard deviation (population-based) of data values. |
+    | Variance | Variance (population-based) of data values. |
+
+10. Select **Unique** to specify that the values of the tracked entity
     attribute is unique.
 
     There are two options for the unique setting:
@@ -1868,29 +1749,20 @@ program
       - **Organisation unit**: The values of the tracked entity
         attribute must not duplicate in the same organisation unit.
 
-13. Select **Inherit** to registry a new entity for relationship with an
+11. Select **Inherit** to registry a new entity for relationship with an
     available entity, all inherit entity attribute values of the entity
     will be pre-filled in the registration form.
 
-14. (Optional) Select **Confidential**.
+12. (Optional) Select **Confidential**.
 
     This option is only available if you have configured encryption for
     the system.
 
-> [!WARNING]
-> The Confidential flag does not guarantee encryption of data at rest and is not currently functioning as intended. Currently, values are stored as both encrypted and plain text values in the database. 
-> 
-> For implementations requiring encryption of sensitive data, it is recommended to use encryption-at-rest features provided by the underlying operating system at the file system level or the block level. Many operating systems support this functionality, including Windows.
-> 
-> Going forward, the Confidential flag should be understood strictly as a visibility control mechanism at Analytics Output level, and not as an encryption feature.
->
-> The DHIS2 Core team therefore discourages use of the Confidential flag for data protection or encryption purposes. Upcoming versions will implement and document consistent functionality and recommendations for security approaches.
+13. (Optional) Select **Display in list without program**.
 
-14. (Optional) Select **Display in list without program**.
+14. (Optional) Assign one or multiple **Legends**.
 
-15. (Optional) Assign one or multiple **Legends**.
-
-16. Click **Save**.
+15. Click **Save**.
 
 ### Create or edit a tracked entity type { #create_tracked_entity } 
 
@@ -1913,9 +1785,9 @@ program
     type** in a *global search*. See [Configure
     Search](#configure_search) for more information.
 
-7.  (Optional) Enter a **Maximum number of tracked entities to
-    return in search**. This specifies the number of tracked entities
-    that will be returned in when searching outside capture scope. See [Configure
+7.  (Optional) Enter a **Maximum number of tracked entity instances to
+    return in search**. This specifies the amount of tracked entity
+    instances that will be returned in a *global search*. See [Configure
     Search](#configure_search) for more information.
 
 8.  (Optional) Add **Tracked entity type attributes**. This is used to
@@ -1933,7 +1805,7 @@ search for tracked entity instances outside their data capture
 organisation units.
 
 Searching can be done either in the context of a program, or in the
-context of a tracked entity type. To give users the option of
+context of a tracked entity type. To be give users the option of
 searching in the context of a program, it is necessary to configure
 which of the programs tracked entity attributes is searchable. To give
 users the option of searching in the context of a tracked entity type,
@@ -1956,7 +1828,7 @@ searchable.
 
 5.  Set the attribute searchable
 
-Searchable program attributes will be assigned to a search group.
+Searchable program attributes will assigned to a search group.
 
   - Unique group. One group per unique program attribute. Unique
     attributes cannot be combined with other program attributes in a
@@ -1976,17 +1848,11 @@ the **Program details** configuration.
 
 <!-- end list -->
 
-  - Maximum number of tracked entities to return: This property defines how specific a 
-  search must be, by limiting the number of matching tracked entities a user is allowed to get for 
-  their search criteria. If the number of matching records is larger than this setting, they will not 
-  be returned. The user must then provide more specific search criteria, in order to reduce the number 
-  of matching records, before they are returned. More on limits 
-  [here](../developer/web-api/tracker.md#tracked-entities-collection-limits).
+  - Maximum number of tracked entity instances to return: This property defines how specific a search must be, by limiting the number of matching tracked entity instances a user is allowed to get for her search criteria. If the number of matching records is larger than this maximum, they will not be returned. The user must provide more specific search criteria, in order to reduce the number of matching records, before they are returned.
 
     > **NOTE**
     >
-    > This maximum limit setting is only applied to search results when searching outside the users capture org unit. Within the 
-    capture scope, the user can see any number of results.
+    > This maximum is only applied to search results outside the users capture org unit. Within the capture scope, the user can see any number of results.
 
 ### Configure search for tracked entity type
 
@@ -2006,7 +1872,7 @@ searchable.
 
 4.  Set the attribute searchable
 
-Searchable TET attributes will be assigned to a search group.
+Searchable TET attributes will assigned to a search group.
 
   - Unique group. One group per unique TET attribute. Unique attributes
     cannot be combined with other TET attributes in a search. The result
@@ -2034,7 +1900,7 @@ There are two limits that can be set for a TET search
 To be able to search in other organisation units than the users data
 capture organisation units, the user must be assigned with search
 organisation units. Giving a user a search organisation unit will also
-give them access to search in all children of that organisation unit.
+give it access to search in all children of that organisation unit.
 
 1.  Open **Users app**
 
@@ -2089,7 +1955,7 @@ example organisation units and tracked entity attributes. These sharing
 settings control which users and users groups that can view or edit a
 metadata object.
 
-Some metadata objects also allow you to change the sharing setting of
+Some metadata objects also allows you to change the sharing setting of
 data entry for the object. These additional settings control who can
 view or enter data in form fields using the metadata.
 
